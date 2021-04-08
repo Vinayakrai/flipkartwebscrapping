@@ -46,7 +46,7 @@ wb.save("FinalRecords.xlsx")
 msg=EmailMessage()
 msg['Subject']='iPhone Records'
 msg['From']='Vinayak Rai'
-msg['To']='csun1561@gmail.com'
+msg['To']='#Sender Mail I'd'
 
 with open('EmailTemplate.txt') as myfile:
     data=myfile.read()
@@ -58,7 +58,7 @@ with open("FinalRecords.xlsx", "rb") as f:
     msg.add_attachment(file_data, maintype="application", subtype="xlsx", filename=file_name)
 
 with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
-    server.login("mukkumar388@gmail.com", "vinayak8rai")
+    server.login("# YourMail I'd", "#Password")
     server.send_message(msg)
 
 print("Email sent!!")
